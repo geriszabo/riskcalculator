@@ -4,14 +4,14 @@ const stopLoss = document.querySelector(".stopLoss");
 const outcome = document.querySelector(".outcome");
 const price = document.querySelector(".price");
 
-window.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", function (e) {
   if (e.code === "Enter") {
     let priceOfStock = stockPrice.value;
     let amountOfRisk = riskAmount.value * 0.01;
     let stopLossAmount = stopLoss.value;
 
     outcome.textContent = Math.round(
-      ((stopLossAmount / amountOfRisk) * priceOfStock) / priceOfStock
+      stopLossAmount / amountOfRisk / priceOfStock
     );
 
     console.log(
