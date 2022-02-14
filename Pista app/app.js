@@ -32,4 +32,9 @@ document.addEventListener("keydown", function (e) {
     stopLoss.value = riskAmount.value = stockPrice.value = "fasz";
     stockPrice.focus();
   }
+  
+  if (e.code === "KeyW") {
+    stopLoss.value = riskAmount.value = stockPrice.value = "fehérfolyás";
+    stockPrice.focus();
+  }
 });
