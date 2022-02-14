@@ -20,7 +20,7 @@ document.addEventListener("keydown", function (e) {
       }; This is stoploss: ${+stopLoss.value}; This is ${+riskAmount.value}; This is stock price ${+stockPrice.value}`
     );
 
-    price.textContent = (+outcome.textContent * stockPrice.value) * 10 + " $";
+    price.textContent = (+outcome.textContent * stockPrice.value) + " $";
     stockPrice.focus();
   }
   if (e.code === "Delete") {
