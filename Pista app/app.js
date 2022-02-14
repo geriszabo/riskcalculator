@@ -11,7 +11,7 @@ document.addEventListener("keydown", function (e) {
     let stopLossAmount = stopLoss.value;
 
     outcome.textContent = Math.round(
-      stopLossAmount / amountOfRisk / priceOfStock * 10
+      stopLossAmount / (amountOfRisk / priceOfStock) / priceOfStock
     );
 
     console.log(
@@ -20,7 +20,7 @@ document.addEventListener("keydown", function (e) {
       }; This is stoploss: ${+stopLoss.value}; This is ${+riskAmount.value}; This is stock price ${+stockPrice.value}`
     );
 
-    price.textContent = +outcome.textContent * stockPrice.value + " $";
+    price.textContent = +outcome.textContent * priceOfStock + " $";
     stockPrice.focus();
   }
   if (e.code === "Delete") {
